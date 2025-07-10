@@ -2,16 +2,6 @@
 <html lang="en">
 
 <head>
-  
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-EZYCZRCZMB"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-EZYCZRCZMB');
-</script>
 
   <!-- ======= Start Google Tag Manager ======= -->
 
@@ -30,8 +20,8 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>Vasu Solanki</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <meta content="Vasu Solanki - Data Analyst Portfolio. Skilled in Python, SQL, Power BI, Excel, and Data Visualization. BTech Computer Science student passionate about data science." name="description">
+  <meta content="Vasu Solanki, Data Analyst, Portfolio, Python, SQL, Power BI, Excel, Data Science, BTech Computer Science, Data Visualization, Machine Learning" name="keywords">
 
 
 
@@ -46,7 +36,7 @@
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/owl.carouselassets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
 
@@ -113,7 +103,7 @@
   <!--
   <img class="background-image" src="assets/img/background/tunnel_slowmo.gif" />
   -->
-  <video class="background-image" src="assets/img/background/nature.mp4" muted loop autoplay></video>
+  <video class="background-image" src="assets/img/background/nature.mp4" muted loop autoplay preload="metadata"></video>
   
   
   
@@ -123,16 +113,16 @@
 
     <div class="container">
       <h1><a href="index.html">VASU SOLANKI</a></h1>
-      <h2 style="color:#ffffff">I am <span class="typing" style="color:#12cfd6"></span></h2>
+      <h2>I am <span class="typing"></span></h2>
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <li class="active"><a href="#header"> <span>Home</span></a></li>
           <li><a href="#about"> <span>About</span></a></li>
           <li><a href="#education"> <span>Education</span></a></li>
           <li><a href="#experience"> <span>Experience</span></a></li>
-          <li><a href="#skills"> <span>Skills</span></a></li>
+          <!-- <li><a href="#skills"> <span>Skills</span></a></li> -->
           <li><a href="#projects"> <span>Projects</span></a></li>
-          <li><a href="#Certificates"> <span>Certificate</span></a></li>
+          <!-- <li><a href="#Certificates"> <span>Certificate</span></a></li> -->
           <li><a href="#cv"> <span>CV</span></a></li>
         </ul>
         <br>
@@ -147,6 +137,9 @@
         <a href="https://www.instagram.com/solanki_x_" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
         <a href="https://www.hackerrank.com/profile/vasusolanki1009" target="_blank" class="hackerrank"><img class="svg" src="assets/img/social/hackerrank.svg" width="13" /></a>
         <a href="https://leetcode.com/u/vasusolanki1009/" target="_blank" class="leetcode"><img class="svg" src="assets/img/social/leetcode.svg" width="13" /></a>
+      </div>
+      <div class="email-contact">
+        <p class="email-text">vasusolanki1009@gmail.com</p>
       </div>
     </div>
 
@@ -169,7 +162,7 @@
         /* Style for the certificate item */
         .certificate-item {
           text-align: center;
-          background-color: rgb(9, 32, 58);
+          background-color: #4285f4;
           padding: 20px;
           border-radius: 10px;
           height: 400px; /* Set a fixed height to ensure all containers are the same */
@@ -191,7 +184,7 @@
         .certificate-item .title {
           margin-top: 10px;
           font-size: 1.2em;
-          color: #12cfd6;
+          color: #fbbc05;
           flex-grow: 0;
         }
 
@@ -201,6 +194,241 @@
           font-size: 0.9em;
           color: #fff;
           flex-grow: 0;
+        }
+
+        /* Hover effect for certificate items */
+        .certificate-item:hover {
+          background-color: #34a853;
+          transform: scale(1.02);
+          transition: all 0.3s ease;
+        }
+
+        .certificate-item:hover .title {
+          color: #fff;
+        }
+
+        /* Flip Card Styles */
+        .flip-card {
+          background-color: transparent;
+          width: 100%;
+          height: 400px;
+          perspective: 1000px;
+          cursor: pointer;
+        }
+
+        .flip-card-inner {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          transition: transform 0.8s ease-in-out;
+          transform-style: preserve-3d;
+        }
+
+        .flip-card.flipped .flip-card-inner {
+          transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .flip-card-front {
+          background-color: #4285f4;
+          color: white;
+          display: flex;
+          flex-direction: column;
+          padding: 20px;
+        }
+
+        .front-image-container {
+          height: 180px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 5px;
+        }
+
+        .front-image-container img,
+        .front-image-container video {
+          max-width: 100%;
+          max-height: 180px;
+          width: auto;
+          height: auto;
+          border-radius: 8px;
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+          object-fit: contain;
+        }
+
+        .front-divider {
+          width: 80%;
+          height: 2px;
+          background-color: #fbbc05;
+          margin: 5px auto;
+          border-radius: 1px;
+        }
+
+        .front-content {
+          text-align: center;
+          margin-top: 0px;
+          flex-grow: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          padding-top: 5px;
+        }
+
+        .front-content .title {
+          margin-bottom: 10px;
+          font-size: 1.2em;
+          color: #fbbc05;
+        }
+
+        .front-content .description {
+          margin-bottom: 0;
+          font-size: 0.9em;
+          color: #fff;
+        }
+
+        .flip-card-back {
+          background-color: white;
+          color: black;
+          transform: rotateY(180deg);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 20px;
+        }
+
+        .back-content {
+          text-align: center;
+          width: 100%;
+        }
+
+        .back-title {
+          font-size: 1.3em;
+          font-weight: bold;
+          color: #333;
+          margin-bottom: 15px;
+        }
+
+        .back-description {
+          font-size: 0.9em;
+          color: #666;
+          margin-bottom: 25px;
+          line-height: 1.5;
+        }
+
+        .project-links {
+          display: flex;
+          justify-content: center;
+          gap: 20px;
+          flex-wrap: wrap;
+        }
+
+        .project-link {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          padding: 10px 20px;
+          border-radius: 25px;
+          text-decoration: none;
+          font-weight: 500;
+          transition: all 0.3s ease;
+          border: 2px solid;
+        }
+
+        .github-link {
+          color: #333;
+          border-color: #333;
+        }
+
+        .github-link:hover {
+          background-color: #333;
+          color: white;
+          text-decoration: none;
+        }
+
+        .linkedin-link {
+          color: #0077b5;
+          border-color: #0077b5;
+        }
+
+        .linkedin-link:hover {
+          background-color: #0077b5;
+          color: white;
+          text-decoration: none;
+        }
+
+        .project-link i {
+          font-size: 1.1em;
+        }
+
+        /* Ensure video and images don't interfere with flip */
+        .flip-card-front video,
+        .flip-card-front img {
+          pointer-events: none;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+          .flip-card {
+            height: 350px;
+          }
+          
+          .flip-card-front {
+            padding: 15px;
+          }
+          
+          .front-image-container {
+            height: 140px;
+            margin-bottom: 4px;
+          }
+          
+          .front-image-container img,
+          .front-image-container video {
+            max-height: 140px;
+          }
+          
+          .front-divider {
+            margin: 4px auto;
+          }
+          
+          .front-content {
+            margin-top: 0px;
+            padding-top: 4px;
+          }
+          
+          .front-content .title {
+            font-size: 1.1em;
+          }
+          
+          .front-content .description {
+            font-size: 0.85em;
+          }
+          
+          .back-title {
+            font-size: 1.1em;
+          }
+          
+          .back-description {
+            font-size: 0.85em;
+          }
+          
+          .project-links {
+            gap: 15px;
+          }
+          
+          .project-link {
+            padding: 8px 16px;
+            font-size: 0.9em;
+          }
         }
 
     </style>
@@ -261,32 +489,32 @@
           <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
             <a href="https://aktu.ac.in/index.html" target="_blank"><img src="assets/img/education/AKTU.png" class="img-fluid" style="float:left;margin:0 10px 0 0;" width="90"></a>
 
-            <h4 style="text-align:left;"><a href="https://aktu.ac.in/index.html" target="_blank" style="color:#12cfd6">Dr APJ Abdul Kalam Technical University</a><br> </h4>
+            <h4 style="text-align:left;"><a href="https://aktu.ac.in/index.html" target="_blank" style="color:#fbbc05">Dr APJ Abdul Kalam Technical University</a><br> </h4>
 
             <h5 style="text-align:left;"><em>Bachelor of Technology </em></h5>
 
             <span class="left" style="float:left;color:#fff;"><em>Augest 2022 - Present</em></span>
 
             <span class="right" style="float:right;color:#fff;"><em>Greater Noida, U.P</em></span><br><br>
-            <h6 style="text-align:left;"><strong>Field of Specialization:</strong>Computer Science Engineering</h6>
-            <!-- <h6 style="text-align:left;"><strong>Senior Design Project:</strong> Keyword Search for Sign Language</h6>
-            <h6 style="text-align:left;"><strong>High Honors Degree:</strong> Awarded to Bachelor alumni who have graduated with a GPA greater than or equal to 3.50. (July 2023)</h6>
-            <h6 style="text-align:left;"><strong>National University Admission Exam (YKS):</strong> Ranked 75<sup>th</sup> in Mathematics and Science among ca. 2.3 million candidates with a test score of 489.92/500. (July 2018)</h6> -->
-            <h6 style="text-align:left;"><strong>Relevant Coursework:</strong></h6>
-            <ul style="columns:1;text-align:left;">
-              <li><strong>Computer Networks</strong>: Study of network protocols, architectures, and security.</li>
-              <li><strong>Data Analytics</strong>: Tools and methodologies for analyzing and interpreting data to drive decision-making.</li>
-              <li><strong>Data Structures and Algorithms</strong>: Foundational principles and techniques for solving complex computational problems.</li>
-              <li><strong>Database Management Systems</strong>: Introduction to database design, SQL, and data management.</li>
-              <li><strong>Operating Systems</strong>: Understanding of operating system concepts, process management, and system calls.</li>
-              <li><strong>Web Development</strong>: Fundamentals of web technologies, HTML, CSS, and JavaScript.</li>
-              <li><strong>Introduction to Artificial Intelligence</strong>: Basics of AI, including search algorithms, logic, and machine learning concepts.</li>
-              <li><strong>Object-Oriented Programming (OOP)</strong>: In-depth exploration of object-oriented programming principles, including encapsulation, inheritance, polymorphism, and abstraction.</li>
-              <li><strong>Data Visualization</strong>: Techniques for visualizing complex data and insights using various tools and platforms.</li>
-            </ul>
+            <h6 style="text-align:left;"><strong>Field of Specialization:</strong> Computer Science Engineering</h6>
+          </div>
+        </div>       
+      </div>
+      <div class="row">
+        <div class="col-lg-12" data-aos="fade-up">
+          <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
+            <a href="https://aktu.ac.in/index.html" target="_blank"><img src="assets/img/education/cbse-seeklogo.png" class="img-fluid" style="float:left;margin:0 10px 0 0;" width="90"></a>
+
+            <h4 style="text-align:left;"><a href="https://aktu.ac.in/index.html" target="_blank" style="color:#fbbc05"> Central Board of Secondary Education</a><br> </h4>
+
+            <h5 style="text-align:left;"><em>Class-12th </em></h5>
+
+            <span class="left" style="float:left;color:#fff;"><em>2020 - 2021</em></span>
+
+            <span class="right" style="float:right;color:#fff;"><em>Shadhara, Delhi</em></span><br><br>
+            <h6 style="text-align:left;"><strong>Field of Specialization:</strong> PCMB </h6>
           </div>
         </div>
-       
       </div>
     </div>
   </section>
@@ -303,42 +531,25 @@
         <h2>Experience</h2>
       </div>
       
-      <!-- Expirence rows -->
-      <!-- <div class="row">
-        <div class="col-lg-12" data-aos="fade-up">
-          <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-            <a href="https://www.avikon.com.tr/en" target="_blank"><img src="assets/img/experience/avikon_transparent.png"
-                class="img-fluid" style="float:left;margin:0 10px 0 0;" width="90"></a>
-            <h4 style="text-align:left;"><a href="https://www.avikon.com.tr/en" target="_blank" style="color:#12cfd6">Avikon</a><br>
-            </h4>
-            <h5 style="text-align:left;"><em>Software Engineer</em></h5>
-            <span class="left" style="float:left;color:#fff;"><em>December 2023 - Present, Full-time</em></span>
-            <span class="right" style="float:right;color:#fff;"><em>Istanbul, Turkey</em></span><br><br>
-            <ul style="text-align:left;">
-              <li>
-                Designed a Qt&#8209;based chat application utilizing TCP for real&#8209;time communication within a
-                client&#8209;server architecture, demonstrating expertise in socket programming, data serialization, and message routing.
-              </li>
-              <li>
-                Crafted message types in IDL and designed a data&#8209;centric publish&#8209;subscribe architecture based on a
-                flyweight design pattern to implement OpenDDS for a radar system’s command and control interface. Utilized QoS
-                policies to facilitate the transmission of both volatile and persistent data across different topics.
-              </li>
-              <li>
-                Implemented a fully asynchronous AMQP&#8209;based C++ client with a layered architecture for RabbitMQ message broker to
-                ensure seamless message handling among multiple topics.
-              </li>
-              <li>
-                Developed a cross&#8209;platform asynchronous program to refine UAV detection for a GIS application. Benchmarked point&#8209;in&#8209;polygon
-                algorithms with a GeoJSON polygon database concurrently fetched from MongoDB.
-              </li>
-            </ul>
-          </div>
-
+      <!-- Interactive Cat Element -->
+      <div id="interactive-cat" class="cat-follower">
+        <img src="assets/img/sad-apple.webp" alt="Cat" class="cat-image">
+      </div>
+      
+      <!-- Message Box -->
+      <div id="cat-message" class="cat-message-box">
+        <div class="message-content">
+          🐾 Give me a job, please. 😸
         </div>
-      </div> -->
-      <div class="image-container">
-        <img src="assets/img/experience/dp_processed.png" alt="No">
+      </div>
+      
+      <div class="experience-content">
+        <div id="cat-trigger-container" class="cat-trigger-container">
+          <p id="click-instruction" class="click-instruction">Click the Cat</p>
+          <div id="trigger-cat" class="trigger-cat">
+            <div class="trigger-cat-emoji">🐱</div>
+          </div>
+        </div>
       </div>
     
     </div>
@@ -353,6 +564,157 @@
   <section id="projects" class="services">
     <div class="container">
       <div class="section-title">
+        <h2>Skills</h2>
+      </div>
+      <div class="row">
+        <div class="col-lg-12" data-aos="fade-up">
+          <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
+            <!-- <h4 style="text-align:left;color:#fbbc05;">Languages</h4> -->
+            <div class="skills-container">
+              <div class="skills-inner">
+                  <figure class="item">
+                    <img src="assets/img/skill icons/technologies/MySQL.png" alt="mysql" width="40" height="40" />
+                    <figcaption>MySQL</figcaption>
+                  </figure>
+                  <figure class="item">
+                    <img src="assets/img/skill icons/technologies/power-bi.768x1024.png" alt="PowerBI" width="40" height="40" />
+                    <figcaption>PowerBI</figcaption>
+                  </figure>
+                  <figure class="item">
+                    <img src="assets/img/skill icons/technologies/pngwing.com.png" alt="Tableau" width="40" height="40" />
+                    <figcaption>Tableau</figcaption>
+                  </figure>
+                  <figure class="item">
+                    <img src="assets/img/skill icons/technologies/icons8-excel-48.png" alt="Excel" width="40" height="40" />
+                    <figcaption>Excel</figcaption>
+                  </figure>
+                  <figure class="item">
+                    <img src="assets/img/skill icons/languages/Python.png" alt="Python" width="40" height="40" />
+                    <figcaption>Python</figcaption>
+                  </figure>
+                  <figure class="item">
+                    <img src="assets/img/skill icons/library/NumPy.png" alt="numpy" width="40" height="40" />
+                    <figcaption>NumPy</figcaption>
+                  </figure>
+                  <figure class="item">
+                    <img src="assets/img/skill icons/library/Matplotlib.png" alt="Matplotlib" width="40" height="40" />
+                    <figcaption>Matplotlib</figcaption>
+                  </figure>
+                  <figure class="item">
+                    <img src="assets/img/skill icons/library/Pandas.png" alt="Pandas" width="40" height="40" />
+                    <figcaption>Pandas</figcaption>
+                  </figure>
+                  <figure class="item">
+                    <img src="assets/img/skill icons/technologies/Git.png" alt="Git" width="40" height="40" />
+                    <figcaption>Git</figcaption>
+                  </figure>
+                  <figure class="item">
+                    <img src="assets/img/skill icons/technologies/GitHub.png" alt="GitHub" width="40" height="40" />
+                    <figcaption>GitHub</figcaption>
+                  </figure>
+                  <figure class="item">
+                    <img src="assets/img/skill icons/technologies/Jupyter.png" alt="Notebook" width="40" height="40" />
+                    <figcaption>Jupyter</figcaption>
+                  </figure>
+                  <figure class="item">
+                    <img src="assets/img/skill icons/technologies/AWS.png" alt="AWS" width="40" height="40" />
+                    <figcaption>AWS</figcaption>
+                  </figure>
+                  <figure class="item">
+                    <img src="assets/img/skill icons/technologies/PyCharm.png" alt="PyCharm" width="40" height="40" />
+                    <figcaption>PyCharm</figcaption>
+                  </figure>
+                  <figure class="item">
+                    <img src="assets/img/skill icons/languages/Java.png" alt="Java" width="40" height="40" />
+                    <figcaption>Java</figcaption>
+                  </figure>
+                  <figure class="item">
+                    <img src="assets/img/skill icons/languages/C.png" alt="C" width="40" height="40" />
+                    <figcaption>C</figcaption>
+                  </figure>
+                  <figure class="item">
+                    <img src="assets/img/skill icons/languages/HTML5.png" alt="HTML5" width="40" height="40" />
+                    <figcaption>HTML5</figcaption>
+                  </figure>
+                  <figure class="item">
+                    <img src="assets/img/skill icons/languages/CSS3.png" alt="CSS3" width="40" height="40" />
+                    <figcaption>CSS3</figcaption>
+                  </figure>
+                  <!-- Duplicate for seamless loop -->
+                  <figure class="item">
+                    <img src="assets/img/skill icons/technologies/MySQL.png" alt="mysql" width="40" height="40" />
+                    <figcaption>MySQL</figcaption>
+                  </figure>
+                  <figure class="item">
+                    <img src="assets/img/skill icons/technologies/power-bi.768x1024.png" alt="PowerBI" width="40" height="40" />
+                    <figcaption>PowerBI</figcaption>
+                  </figure>
+                  <figure class="item">
+                    <img src="assets/img/skill icons/technologies/pngwing.com.png" alt="Tableau" width="40" height="40" />
+                    <figcaption>Tableau</figcaption>
+                  </figure>
+                  <figure class="item">
+                    <img src="assets/img/skill icons/technologies/icons8-excel-48.png" alt="Excel" width="40" height="40" />
+                    <figcaption>Excel</figcaption>
+                  </figure>
+                  <figure class="item">
+                    <img src="assets/img/skill icons/languages/Python.png" alt="Python" width="40" height="40" />
+                    <figcaption>Python</figcaption>
+                  </figure>
+                  <figure class="item">
+                    <img src="assets/img/skill icons/library/NumPy.png" alt="numpy" width="40" height="40" />
+                    <figcaption>NumPy</figcaption>
+                  </figure>
+                  <figure class="item">
+                    <img src="assets/img/skill icons/library/Matplotlib.png" alt="Matplotlib" width="40" height="40" />
+                    <figcaption>Matplotlib</figcaption>
+                  </figure>
+                  <figure class="item">
+                    <img src="assets/img/skill icons/library/Pandas.png" alt="Pandas" width="40" height="40" />
+                    <figcaption>Pandas</figcaption>
+                  </figure>
+                  <figure class="item">
+                    <img src="assets/img/skill icons/technologies/Git.png" alt="Git" width="40" height="40" />
+                    <figcaption>Git</figcaption>
+                  </figure>
+                  <figure class="item">
+                    <img src="assets/img/skill icons/technologies/GitHub.png" alt="GitHub" width="40" height="40" />
+                    <figcaption>GitHub</figcaption>
+                  </figure>
+                  <figure class="item">
+                    <img src="assets/img/skill icons/technologies/Jupyter.png" alt="Notebook" width="40" height="40" />
+                    <figcaption>Jupyter</figcaption>
+                  </figure>
+                  <figure class="item">
+                    <img src="assets/img/skill icons/technologies/AWS.png" alt="AWS" width="40" height="40" />
+                    <figcaption>AWS</figcaption>
+                  </figure>
+                  <figure class="item">
+                    <img src="assets/img/skill icons/technologies/PyCharm.png" alt="PyCharm" width="40" height="40" />
+                    <figcaption>PyCharm</figcaption>
+                  </figure>
+                  <figure class="item">
+                    <img src="assets/img/skill icons/languages/Java.png" alt="Java" width="40" height="40" />
+                    <figcaption>Java</figcaption>
+                  </figure>
+                  <figure class="item">
+                    <img src="assets/img/skill icons/languages/C.png" alt="C" width="40" height="40" />
+                    <figcaption>C</figcaption>
+                  </figure>
+                  <figure class="item">
+                    <img src="assets/img/skill icons/languages/HTML5.png" alt="HTML5" width="40" height="40" />
+                    <figcaption>HTML5</figcaption>
+                  </figure>
+                  <figure class="item">
+                    <img src="assets/img/skill icons/languages/CSS3.png" alt="CSS3" width="40" height="40" />
+                    <figcaption>CSS3</figcaption>
+                  </figure>
+              </div>
+            </div>
+          </div>
+    
+    <div class="container">
+      <div class="section-title">
         <h2>Projects</h2>
       </div>
 
@@ -360,50 +722,118 @@
         
         <!-- Project 1 -->
         <div class="col-md-4 mb-4">
-          <a href="https://github.com/Vasu-Solanki/Blinkit_dashboard" target="_blank" rel="noreferrer">
-          <div class="certificate-item" data-aos="fade-up" data-aos-delay="100">
-                  <img src="assets/img/projects/BLINKIT DASHBOARD_page-0001.jpg" class="img-fluid" alt="Accenture Certificate" autoplay muted loop>
-                  
+          <div class="flip-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="flip-card-inner">
+              <!-- Front Side -->
+              <div class="flip-card-front certificate-item">
+                <div class="front-image-container">
+                  <img src="assets/img/projects/BLINKIT DASHBOARD_page-0001.jpg" class="img-fluid" alt="Blinkit Dashboard Project">
+                </div>
+                <div class="front-divider"></div>
+                <div class="front-content">
                   <h5 class="title">
                     <strong>Power BI Dashboard Development for Blinkit</strong>
                   </h5>
                   <p class="description">Data Analysis | Power BI | Advance DAX</p>
                 </div>
               </div>
-            </a>
+              <!-- Back Side -->
+              <div class="flip-card-back">
+                <div class="back-content">
+                  <h5 class="back-title">Power BI Dashboard Development for Blinkit</h5>
+                  <p class="back-description">Comprehensive data analysis dashboard showcasing sales performance, customer insights, and business metrics using advanced DAX functions and interactive visualizations.</p>
+                  <div class="project-links">
+                    <a href="https://github.com/Vasu-Solanki/Blinkit_dashboard" target="_blank" rel="noreferrer" class="project-link github-link">
+                      <i class="bx bxl-github"></i> GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/vasusolanki/" target="_blank" rel="noreferrer" class="project-link linkedin-link">
+                      <i class="bx bxl-linkedin"></i> LinkedIn
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- Project 2 -->
         <div class="col-md-4 mb-4">
-          <a href="https://github.com/Vasu-Solanki/Ecommerce_dashboard" target="_blank" rel="noreferrer">
-          <div class="certificate-item" data-aos="fade-up" data-aos-delay="100">
-                  <img src="assets/img/projects/MADHAV SALES.jpg" class="img-fluid" alt="Accenture Certificate" autoplay muted loop>
-                  
+          <div class="flip-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="flip-card-inner">
+              <!-- Front Side -->
+              <div class="flip-card-front certificate-item">
+                <div class="front-image-container">
+                  <img src="assets/img/projects/MADHAV SALES.jpg" class="img-fluid" alt="Madhav Sales Dashboard Project">
+                </div>
+                <div class="front-divider"></div>
+                <div class="front-content">
                   <h5 class="title">
                     <strong>MADHAV Sales Dashboard</strong>
                   </h5>
                   <p class="description">Advance Excel | Data Analysis | PowerBI</p>
                 </div>
               </div>
-            </a>
+              <!-- Back Side -->
+              <div class="flip-card-back">
+                <div class="back-content">
+                  <h5 class="back-title">MADHAV Sales Dashboard</h5>
+                  <p class="back-description">E-commerce sales analysis dashboard built with advanced Excel functions and Power BI, providing insights into sales trends, customer behavior, and regional performance.</p>
+                  <div class="project-links">
+                    <a href="https://github.com/Vasu-Solanki/Ecommerce_dashboard" target="_blank" rel="noreferrer" class="project-link github-link">
+                      <i class="bx bxl-github"></i> GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/vasusolanki/" target="_blank" rel="noreferrer" class="project-link linkedin-link">
+                      <i class="bx bxl-linkedin"></i> LinkedIn
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- Project 3 -->
         <div class="col-md-4 mb-4">
-          <a href="https://github.com/Vasu-Solanki/Diwali_Sales_Analysis" target="_blank" rel="noreferrer">
-          <div class="certificate-item" data-aos="fade-up" data-aos-delay="100">
-                  <video src="assets/img/projects/diwali-1726744071433.mp4" class="img-fluid" alt="Accenture Certificate" autoplay muted loop>
+          <div class="flip-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="flip-card-inner">
+              <!-- Front Side -->
+              <div class="flip-card-front certificate-item">
+                <div class="front-image-container">
+                  <video src="assets/img/projects/diwali-1726744071433.mp4" class="img-fluid" alt="Diwali Sales Analysis Project" autoplay muted loop>
                   </video>
+                </div>
+                <div class="front-divider"></div>
+                <div class="front-content">
                   <h5 class="title">
                     <strong>Diwali Sales Analysis</strong>
                   </h5>
-                  <p class="description">Data Analysis | Buisness Analysis | Python </p>
+                  <p class="description">Python | Pandas | Data Visualization | EDA</p>
                 </div>
               </div>
-            </a>
-
+              <!-- Back Side -->
+              <div class="flip-card-back">
+                <div class="back-content">
+                  <h5 class="back-title">Diwali Sales Analysis</h5>
+                  <p class="back-description">Comprehensive exploratory data analysis of Diwali sales using Python, Pandas, and data visualization libraries to uncover customer purchasing patterns and seasonal trends.</p>
+                  <div class="project-links">
+                    <a href="https://github.com/Vasu-Solanki/Diwali_Sales_Analysis" target="_blank" rel="noreferrer" class="project-link github-link">
+                      <i class="bx bxl-github"></i> GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/vasusolanki/" target="_blank" rel="noreferrer" class="project-link linkedin-link">
+                      <i class="bx bxl-linkedin"></i> LinkedIn
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- ======= End Projects Section ======= -->
+<!-- ======= End Projects Section ======= -->
 
 
 
@@ -418,7 +848,7 @@
         <div class="col-lg-12" data-aos="fade-up">
           <!-- Languages -->
           <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-            <h4 style="text-align:left;color:#12cfd6;">Languages</h4>
+            <h4 style="text-align:left;color:#fbbc05;">Languages</h4>
             <div style="text-align:left;">
               <figure class="item" style="display:inline-block;">
                 <img src="assets/img/skill icons/languages/C.png" alt="c" width="40" height="40" />
@@ -451,65 +881,16 @@
               </figure>
               &nbsp; &nbsp;
 
-              <!-- <figure class="item" style="display:inline-block;">
-                <a href="https://www.cplusplus.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/arasgungore/arasgungore/main/icons/cplusplus.svg" alt="cplusplus" width="40" height="40" /> </a>
-                <figcaption style="text-align:center;">C++</figcaption>
-              </figure>
-              &nbsp; &nbsp; -->
+              
             </div>
           </div>
 
 
           <!-- Technology -->
           <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-            <h4 style="text-align:left;color:#12cfd6;">Technologies</h4>
+            <h4 style="text-align:left;color:#fbbc05;">Technologies</h4>
             <div style="text-align:left;">
               
-              <figure class="item" style="display:inline-block;">
-                <img src="assets/img/skill icons/technologies/MySQL.png" alt="mysql" width="40" height="40" />
-                <figcaption style="text-align:center;">MySQL</figcaption>
-              </figure>
-              &nbsp; &nbsp;
-              <figure class="item" style="display:inline-block;">
-                <img src="assets/img/skill icons/technologies/AWS.png" alt="AWS" width="40" height="40" />
-                <figcaption style="text-align:center;">AWS</figcaption>
-              </figure>
-              &nbsp; &nbsp;
-              <figure class="item" style="display:inline-block;">
-                <img src="assets/img/skill icons/technologies/PyCharm.png" alt="mysql" width="40" height="40" />
-                <figcaption style="text-align:center;">PyCharm</figcaption>
-              </figure>
-              &nbsp; &nbsp;
-              <figure class="item" style="display:inline-block;">
-                <img src="assets/img/skill icons/technologies/power-bi.768x1024.png" alt="PowerBI" width="40" height="40" />
-                <figcaption style="text-align:center;">PowerBI</figcaption>
-              </figure>
-              &nbsp; &nbsp;
-              <figure class="item" style="display:inline-block;">
-                <img src="assets/img/skill icons/technologies/pngwing.com.png" alt="Tableau" width="40" height="40" />
-                <figcaption style="text-align:center;">Tableau</figcaption>
-              </figure>
-              &nbsp; &nbsp;
-              <figure class="item" style="display:inline-block;">
-                <img src="assets/img/skill icons/technologies/Git.png" alt="Git" width="40" height="40" />
-                <figcaption style="text-align:center;">Git</figcaption>
-              </figure>
-              &nbsp; &nbsp;
-              <figure class="item" style="display:inline-block;">
-                <img src="assets/img/skill icons/technologies/GitHub.png" alt="GitHub" width="40" height="40" />
-                <figcaption style="text-align:center;">GitHub</figcaption>
-              </figure>
-              &nbsp; &nbsp;
-              <figure class="item" style="display:inline-block;">
-                <img src="assets/img/skill icons/technologies/Jupyter.png" alt="Notebook" width="40" height="40" />
-                <figcaption style="text-align:center;">Jupiter</figcaption>
-              </figure>
-              &nbsp; &nbsp;
-              <figure class="item" style="display:inline-block;">
-                <img src="assets/img/skill icons/technologies/icons8-excel-48.png" alt="Excel" width="40" height="40" />
-                <figcaption style="text-align:center;">Excel</figcaption>
-              </figure>
-              &nbsp; &nbsp;
               <!-- <figure class="item" style="display:inline-block;">
                 <img src="assets/img/skill icons" alt="mysql" width="40" height="40" />
                 <figcaption style="text-align:center;">MySQL</figcaption>
@@ -522,80 +903,10 @@
 
           <!-- Libraries -->
           <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-            <h4 style="text-align:left;color:#12cfd6;">Libraries</h4>
+            <h4 style="text-align:left;color:#fbbc05;">Libraries</h4>
             <div style="text-align:left;">
-              <!-- <figure class="item" style="display:inline-block;"> -->
-
-
-              <!-- <figure class="item" style="display:inline-block;">
-                <a href="https://scikit-learn.org" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="scikit_learn" width="40" height="40" /> </a>
-                <figcaption style="text-align:center;">Scikit-Learn</figcaption>
-              </figure>
-              &nbsp; &nbsp; -->
-
-              <!-- <figure class="item" style="display:inline-block;">
-                <a href="https://pytorch.org" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" alt="pytorch" width="40" height="40" /> </a>
-                <figcaption style="text-align:center;">PyTorch</figcaption>
-              </figure>
-              &nbsp; &nbsp; -->
-
-              <!-- <figure class="item" style="display:inline-block;">
-                <a href="https://keras.io" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/arasgungore/arasgungore/main/icons/keras.svg" alt="keras" width="40" height="40" /> </a>
-                <figcaption style="text-align:center;">Keras</figcaption>
-              </figure>
-              &nbsp; &nbsp;
-
-              <figure class="item" style="display:inline-block;">
-                <a href="https://www.tensorflow.org" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" alt="tensorflow" width="40" height="40" /> </a>
-                <figcaption style="text-align:center;">TensorFlow</figcaption>
-              </figure>
-              &nbsp; &nbsp; -->
-
-              <figure class="item" style="display:inline-block;">
-                <img src="assets/img/skill icons/library/NumPy.png" alt="numpy" width="40" height="40" />
-                <figcaption style="text-align:center;">NumPy</figcaption>
-              </figure>
-              &nbsp; &nbsp;
-
-              <figure class="item" style="display:inline-block;">
-                <img src="assets/img/skill icons/library/Matplotlib.png" alt="Matplotlib" width="40" height="40" />
-                <figcaption style="text-align:center;">Matplotlib</figcaption>
-              </figure>
-              &nbsp; &nbsp;
-
-              <figure class="item" style="display:inline-block;">
-                <img src="assets/img/skill icons/library/Pandas.png" alt="numpy" width="40" height="40" />
-                <figcaption style="text-align:center;">Pandas</figcaption>
-              </figure>
-              &nbsp; &nbsp;
-
-              <figure class="item" style="display:inline-block;">
-                <img src="assets/img/skill icons/library/pngegg.png" alt="numpy" width="40" height="40" />
-                <figcaption style="text-align:center;">SciPy</figcaption>
-              </figure>
-              &nbsp; &nbsp;
-
-              <figure class="item" style="display:inline-block;">
-                <img src="assets/img/skill icons/library/scikit-learn.png" alt="SCikit" width="40" height="40" />
-                <figcaption style="text-align:center;">Scikit</figcaption>
-              </figure>
-              &nbsp; &nbsp;
-
-              <figure class="item" style="display:inline-block;">
-                <img src="assets/img/skill icons/library/seaborn.svg" alt="Seaborn" width="40" height="40" />
-                <figcaption style="text-align:center;">Seaborn</figcaption>
-              </figure>
-              &nbsp; &nbsp;
-              <figure class="item" style="display:inline-block;">
-                <img src="assets/img/skill icons/library/scrapy-logo.png" alt="Seaborn" width="40" height="40" />
-                <figcaption style="text-align:center;">Scrapy</figcaption>
-              </figure>
-              &nbsp; &nbsp;
-              <figure class="item" style="display:inline-block;">
-                <img src="assets/img/skill icons/library/Selenium_Logo.png" alt="Seaborn" width="40" height="40" />
-                <figcaption style="text-align:center;">Selenium</figcaption>
-              </figure>
-              &nbsp; &nbsp;
+             
+              
               
 
             </div>
@@ -603,10 +914,18 @@
 
         </div>
       </div>
+    <!-- Single skill container example -->
+    <div style="text-align:center; padding: 20px;">
+      <figure class="item" style="display:inline-block;">
+        <img src="assets/img/skill icons/languages/Python.png" alt="Python" width="40" height="40" />
+        <figcaption style="text-align:center;">Python</figcaption>
+      </figure>
     </div>
-  </section>
+  
+  </div>
+</section>
 
-  <!-- ======= End Skills Section ======= -->
+<!-- ======= End Skills Section ======= -->
 
 
 
@@ -618,16 +937,16 @@
         <h2>CV</h2>
         <!-- Container for centering the button -->
         <div class="button-container text-center">
-          <a href="assets/img/resume-cv/cv pdf.pdf" class="btn btn-primary" download>Download CV</a>
+          <a href="assets/img/resume-cv/VasuSolankiResume.pdf" class="btn btn-primary" download>Download CV</a>
         </div>
       </div>
       
       <br>
       <!-- CV Details -->
-      <a href="assets/img/resume-cv/cv pdf.pdf" target="_blank">
+      <a href="assets/img/resume-cv/VasuSolankiResume.pdf" target="_blank">
       <div class="resume-preview text-center">
         <!-- Resume Image or PDF Preview -->
-          <img src="assets/img/resume-cv/cv image.jpg" alt="Resume Preview" class="resume-image">
+          <img src="assets/img/resume-cv/VasuSolankiResume.jpg" alt="Resume Preview" class="resume-image">
         </div>
       </a>
     </div>
@@ -637,170 +956,6 @@
   <!-- ======= End CV Section ======= -->
 
 
-
-  <!-- ======= Start Certificates Section ======= -->
-
-  <!-- <section id="Certificates" class="services">
-    <div class="container">
-      <div class="section-title">
-        <h2>Certificates</h2>
-      </div>
-      <div class="row">
-        <div class="col-md-3 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-          <a href="https://drive.google.com/file/d/1TGwMpZl6FDeQk1w_-EetbspCuzu16kCF/view?usp=sharing" target="_blank"><div class="icon"><i class="icofont-page"></i></div></a>
-          <h4 class="title"><a style="color:#12cfd6;" href="https://drive.google.com/file/d/1TGwMpZl6FDeQk1w_-EetbspCuzu16kCF/view?usp=sharing" target="_blank">Curriculum Vitae</a></h4>
-          <p class="description" style="color:#fff;">The above link contains my CV. Also, you can check out the code for this CV <a href="https://github.com/arasgungore/arasgungore-CV" target="_blank">here</a>.</p>
-        </div>
-        <div class="col-md-3 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-          <a href="https://resume.github.io/?arasgungore" target="_blank"><div class="icon"><i class="bx bxl-github"></i></div></a>
-          <h4 class="title"><a style="color:#12cfd6;" href="https://resume.github.io/?arasgungore" target="_blank">GitHub Résumé</a></h4>
-          <p class="description" style="color:#fff;">The above link contains my résumé based on my GitHub repos/activity. Also, you can check out the code for this résumé <a href="https://github.com/resume/resume.github.com" target="_blank">here</a>.</p>
-        </div>
-      </div>
-    </div>
-  </section> -->
-  <section id="Certificates" class="services">
-    <div class="container">
-        <div class="section-title">
-            <h2>Certificates</h2>
-        </div>
-        <div class="row">
-          <!-- Certificate 1 -->
-          <div class="col-md-4 mb-4">
-            <div class="certificate-item" data-aos="fade-up" data-aos-delay="100">
-                <a href="" target="_blank" rel="noreferrer">
-                    <img src="assets/img/certificates/Accenture.jpg" class="img-fluid" alt="Accenture Certificate">
-                </a>
-                <h5 class="title">
-                    <strong>Accenture Certification</strong>
-                </h5>
-                <p class="description">Completion of Accenture program</p>
-            </div>
-          </div>
-
-          <!-- Certificate 2 -->
-          <div class="col-md-4 mb-4">
-            <div class="certificate-item" data-aos="fade-up" data-aos-delay="200">
-                <a href="" target="_blank" rel="noreferrer">
-                    <img src="assets/img/certificates/Coursera Google Data Analyst 1.jpg" class="img-fluid" alt="Certificate 2">
-                </a>
-                <h5 class="title">
-                    <strong>Google Data Analyst - Coursera</strong>
-                </h5>
-                <p class="description">Google Data Analyst certification</p>
-            </div>
-          </div>
-
-          <!-- Certificate 3 -->
-          <div class="col-md-4 mb-4">
-            <div class="certificate-item" data-aos="fade-up" data-aos-delay="300">
-                <a href="" target="_blank" rel="noreferrer">
-                    <img src="assets/img/certificates/aws.jpg" class="img-fluid" alt="Certificate 3">
-                </a>
-                <h5 class="title">
-                    <strong>AWS Certified Cloud Practitioner</strong>
-                </h5>
-                <p class="description">AWS Cloud certification</p>
-            </div>
-          </div>
-
-          <!-- Certificate 4 -->
-          <div class="col-md-4 mb-4">
-            <div class="certificate-item" data-aos="fade-up" data-aos-delay="300">
-                <a href="" target="_blank" rel="noreferrer">
-                    <img src="assets/img/certificates/Advance Excel.jpg" class="img-fluid" alt="Certificate 4">
-                </a>
-                <h5 class="title">
-                    <strong>Advanced Excel Skills</strong>
-                </h5>
-                <p class="description">Excel mastery certification</p>
-            </div>
-          </div>
-
-          <!-- Certificate 5 -->
-          <div class="col-md-4 mb-4">
-            <div class="certificate-item" data-aos="fade-up" data-aos-delay="300">
-                <a href="" target="_blank" rel="noreferrer">
-                    <img src="assets/img/certificates/Data Cleaning by Kaggle.png" class="img-fluid" alt="Certificate 5">
-                </a>
-                <h5 class="title">
-                    <strong>Data Cleaning - Kaggle</strong>
-                </h5>
-                <p class="description">Kaggle data cleaning course</p>
-            </div>
-          </div>
-
-          <!-- Certificate 6 -->
-          <div class="col-md-4 mb-4">
-            <div class="certificate-item" data-aos="fade-up" data-aos-delay="300">
-                <a href="" target="_blank" rel="noreferrer">
-                    <img src="assets/img/certificates/sql_basic certificate.jpg" class="img-fluid" alt="Certificate 6">
-                </a>
-                <h5 class="title">
-                    <strong>SQL Basics Certification</strong>
-                </h5>
-                <p class="description">SQL fundamentals certification</p>
-            </div>
-          </div>
-
-          <!-- Certificate 7 -->
-          <div class="col-md-4 mb-4">
-            <div class="certificate-item" data-aos="fade-up" data-aos-delay="300">
-                <a href="" target="_blank" rel="noreferrer">
-                    <img src="assets/img/certificates/java basic.jpg" class="img-fluid" alt="Certificate 7">
-                </a>
-                <h5 class="title">
-                    <strong>Java Basics Certification</strong>
-                </h5>
-                <p class="description">Java beginner certification</p>
-            </div>
-          </div>
-
-          <!-- Certificate 8 -->
-          <div class="col-md-4 mb-4">
-            <div class="certificate-item" data-aos="fade-up" data-aos-delay="300">
-                <a href="" target="_blank" rel="noreferrer">
-                    <img src="assets/img/certificates/problem solving basic.jpg" class="img-fluid" alt="Certificate 8">
-                </a>
-                <h5 class="title">
-                    <strong>Problem Solving Basics</strong>
-                </h5>
-                <p class="description">Basic problem solving certification</p>
-            </div>
-          </div>
-
-          <!-- Certificate 9 -->
-          <div class="col-md-4 mb-4">
-            <div class="certificate-item" data-aos="fade-up" data-aos-delay="300">
-                <a href="" target="_blank" rel="noreferrer">
-                    <img src="assets/img/certificates/python basic.jpg" class="img-fluid" alt="Certificate 9">
-                </a>
-                <h5 class="title">
-                    <strong>Python Basics Certification</strong>
-                </h5>
-                <p class="description">Python fundamentals certification</p>
-            </div>
-          </div>
-
-          <!-- Certificate 10 -->
-          <div class="col-md-4 mb-4">
-            <div class="certificate-item" data-aos="fade-up" data-aos-delay="300">
-                <a href="" target="_blank" rel="noreferrer">
-                    <img src="assets/img/certificates/Great Learing Excel.jpg" class="img-fluid" alt="Certificate 10">
-                </a>
-                <h5 class="title">
-                    <strong>Excel - Great Learning</strong>
-                </h5>
-                <p class="description">Excel training certification</p>
-            </div>
-          </div>
-
-        </div>
-    </div>
- </section>
-
-
-  <!-- ======= End Certificates Section ======= -->
 
 
 
@@ -831,6 +986,136 @@
   <!-- Template Main JS File -->
 
   <script src="assets/js/main.js"></script>
+
+  <!-- Interactive Cat Follower Script -->
+  <script>
+document.addEventListener('DOMContentLoaded', function() {
+      const cat = document.getElementById('interactive-cat');
+      const experienceSection = document.getElementById('experience');
+      const triggerCat = document.getElementById('trigger-cat');
+      const catMessage = document.getElementById('cat-message');
+      const catTriggerContainer = document.getElementById('cat-trigger-container');
+      const clickInstruction = document.getElementById('click-instruction');
+      let isInExperienceSection = false;
+      let isFollowing = false;
+      
+      // Check if we're in the experience section
+      function checkExperienceSection() {
+        isInExperienceSection = experienceSection.classList.contains('section-show');
+      }
+      
+      // Set initial cat position
+      let catX = window.innerWidth / 2;
+      let catY = window.innerHeight / 2;
+
+      // Mouse move event for cat following
+      document.addEventListener('mousemove', function(e) {
+        checkExperienceSection();
+        
+        if (isInExperienceSection && cat && isFollowing) {
+          // Get mouse position
+          const targetX = e.clientX;
+          const targetY = e.clientY;
+          
+          // Calculate the difference
+          const distX = targetX - catX;
+          const distY = targetY - catY;
+
+          // Update cat's position smoothly to hover on cursor
+          catX += distX * 0.2;
+          catY += distY * 0.2;
+
+          // Position cat to hover directly on cursor
+          const catCenterX = catX - 25; // Half of cat width (50px)
+          const catCenterY = catY - 25; // Half of cat height (50px)
+
+          // Apply smooth transformation
+          cat.style.transform = `translate(${catCenterX}px, ${catCenterY}px)`;
+          cat.style.opacity = '1';
+        } else if (cat && isFollowing) {
+          cat.style.opacity = '0';
+        }
+      });
+      
+      // Click event for trigger cat to start following
+      triggerCat.addEventListener('click', function() {
+        isFollowing = true;
+        
+        // Hide the trigger elements
+        clickInstruction.style.display = 'none';
+        catTriggerContainer.classList.add('hidden');
+        
+        // Show the message and start following
+        cat.classList.add('following');
+        catMessage.classList.add('show');
+
+        // Set initial position to center
+        catX = window.innerWidth / 2;
+        catY = window.innerHeight / 2;
+      });
+      
+      // Reset when leaving experience section
+      function resetCatState() {
+        if (!isInExperienceSection && isFollowing) {
+          isFollowing = false;
+          cat.classList.remove('following');
+          catTriggerContainer.classList.remove('hidden');
+          catMessage.classList.remove('show');
+          clickInstruction.style.display = 'block';
+          cat.style.opacity = '0';
+        }
+      }
+
+      // Observer to watch for section changes
+      const observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+          if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+            checkExperienceSection();
+          }
+        });
+      });
+      
+      // Start observing the experience section for class changes
+      if (experienceSection) {
+        observer.observe(experienceSection, {
+          attributes: true,
+          attributeFilter: ['class']
+        });
+      }
+      
+      // Initial check
+      checkExperienceSection();
+    });
+  </script>
+
+  <!-- Flip Card JavaScript -->
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Get all flip cards
+    const flipCards = document.querySelectorAll('.flip-card');
+    
+    // Add click event listener to each flip card
+    flipCards.forEach(function(card) {
+      card.addEventListener('click', function(e) {
+        // Prevent default link behavior for project links on the back
+        if (e.target.closest('.project-link')) {
+          return; // Allow the link to work normally
+        }
+        
+        // Toggle the flipped class
+        card.classList.toggle('flipped');
+      });
+    });
+    
+    // Handle project links click (prevent card flip when clicking links)
+    const projectLinks = document.querySelectorAll('.project-link');
+    projectLinks.forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        e.stopPropagation(); // Prevent the card flip when clicking links
+      });
+    });
+  });
+  </script>
 
 </body>
 
