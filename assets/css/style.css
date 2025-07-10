@@ -478,7 +478,7 @@ svg {
   left: 15px;
   z-index: 9999;
   overflow-y: auto;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(220, 53, 69, 0.9);
   transition: ease-in-out 0s;
   opacity: 0;
   visibility: hidden;
