@@ -467,7 +467,7 @@ svg {
 }
 
 .mobile-nav-toggle i {
-  color: #fff;
+  color: #4285f4; /* Blue color for better visibility on mobile */
 }
 
 .mobile-nav {
