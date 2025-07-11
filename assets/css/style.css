@@ -22,6 +22,7 @@ img.rounded-circle {
   background: transparent;
   padding: 20px 0;
   white-space: nowrap;
+  will-change: transform;
 }
 
 .skills-inner {
@@ -30,6 +31,9 @@ img.rounded-circle {
   gap: 30px; /* Consistent spacing between all logos */
   flex-shrink: 0;
   align-items: center;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
 }
 
 @keyframes skillsScroll {
@@ -243,6 +247,8 @@ h1, h2, h3, h4, h5, h6 {
   filter: contrast(150%);
   will-change: transform;
   transform: translateZ(0);
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
 }
 
 svg {
@@ -1002,9 +1008,10 @@ section .container {
   height: 50px;
   pointer-events: none;
   z-index: 1000;
-  transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out, transform 0.2s ease-out;
   display: none;
   transform-origin: center;
+  opacity: 0;
 }
 
 .cat-image {
@@ -1028,6 +1035,7 @@ section .container {
 /* Show cat only in experience section when following */
 #experience.section-show .cat-follower.following {
   display: block;
+  opacity: 1;
 }
 
 /* Hide trigger container when following is active */
