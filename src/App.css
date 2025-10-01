@@ -1,0 +1,327 @@
+/* Enhanced App-wide styles for React Portfolio */
+
+.App {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Global section styling */
+section {
+  position: relative;
+  min-height: 100vh;
+  padding: 80px 0;
+  z-index: 10;
+}
+
+/* Enhanced background video styling */
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.3) contrast(1.2);
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enhanced animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Utility classes for animations */
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+.pulse-animation {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.slide-up {
+  animation: slideInUp 0.8s ease-out forwards;
+}
+
+.slide-left {
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.slide-right {
+  animation: slideInRight 0.8s ease-out forwards;
+}
+
+/* Enhanced container styling */
+.enhanced-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Glass morphism effect */
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Enhanced button styles */
+.btn-gradient {
+  background: linear-gradient(45deg, #4285f4, #34a853, #fbbc05, #ea4335);
+  background-size: 300% 300%;
+  animation: gradientShift 3s ease infinite;
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 12px 30px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-gradient:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(66, 133, 244, 0.4);
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Enhanced text styles */
+.text-gradient {
+  background: linear-gradient(45deg, #4285f4, #34a853);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+.typing-effect {
+  border-right: 2px solid #4285f4;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { border-color: transparent; }
+  51%, 100% { border-color: #4285f4; }
+}
+
+/* Enhanced card effects */
+.interactive-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.interactive-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.interactive-card:hover::before {
+  left: 100%;
+}
+
+.interactive-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Skills animation enhancement */
+.skill-icon {
+  transition: all 0.3s ease;
+  filter: grayscale(100%);
+}
+
+.skill-icon:hover {
+  filter: grayscale(0%);
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Project flip card enhancements */
+.flip-card-enhanced {
+  perspective: 1000px;
+  width: 100%;
+  height: 400px;
+}
+
+.flip-card-inner-enhanced {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.flip-card-enhanced:hover .flip-card-inner-enhanced {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front-enhanced,
+.flip-card-back-enhanced {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.flip-card-back-enhanced {
+  transform: rotateY(180deg);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Loading screen styles */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loading-logo {
+  width: 100px;
+  height: 100px;
+  animation: float 2s ease-in-out infinite;
+}
+
+/* Scroll indicator styles */
+.scroll-indicator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 1000;
+}
+
+.scroll-progress {
+  height: 100%;
+  background: linear-gradient(90deg, #4285f4, #34a853, #fbbc05, #ea4335);
+  transition: width 0.3s ease;
+}
+
+/* Enhanced mobile responsiveness */
+@media (max-width: 768px) {
+  section {
+    padding: 60px 0;
+  }
+  
+  .interactive-card:hover {
+    transform: translateY(-5px) scale(1.01);
+  }
+  
+  .flip-card-enhanced {
+    height: 350px;
+  }
+  
+  .btn-gradient {
+    padding: 10px 25px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 40px 0;
+  }
+  
+  .enhanced-container {
+    padding: 0 15px;
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .glass-card {
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid #000;
+  }
+  
+  .text-gradient {
+    background: #000;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

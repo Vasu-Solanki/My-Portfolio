@@ -375,6 +375,89 @@
           pointer-events: none;
         }
 
+        /* Project Filter Styles */
+        .project-filter-container {
+          text-align: center;
+          margin-top: 20px;
+          margin-bottom: 30px;
+        }
+        
+        .filter-btn {
+          background: linear-gradient(45deg, #4285f4, #34a853);
+          border: none;
+          color: white;
+          padding: 12px 24px;
+          border-radius: 25px;
+          font-weight: 500;
+          font-size: 1rem;
+          transition: all 0.3s ease;
+          box-shadow: 0 4px 15px rgba(66, 133, 244, 0.3);
+        }
+        
+        .filter-btn:hover {
+          background: linear-gradient(45deg, #3367d6, #2d7d32);
+          transform: translateY(-2px);
+          box-shadow: 0 6px 20px rgba(66, 133, 244, 0.4);
+          color: white;
+        }
+        
+        .filter-btn:focus {
+          box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.25);
+          color: white;
+        }
+        
+        .filter-btn i {
+          margin-right: 8px;
+        }
+        
+        .dropdown-menu {
+          border: none;
+          border-radius: 12px;
+          box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+          padding: 8px 0;
+          margin-top: 8px;
+          background: white;
+        }
+        
+        .dropdown-item {
+          padding: 12px 20px;
+          font-weight: 500;
+          color: #333;
+          transition: all 0.3s ease;
+        }
+        
+        .dropdown-item:hover {
+          background: linear-gradient(45deg, #f8f9fa, #e9ecef);
+          color: #4285f4;
+          transform: translateX(5px);
+        }
+        
+        .dropdown-item.active {
+          background: linear-gradient(45deg, #4285f4, #34a853);
+          color: white;
+        }
+        
+        .dropdown-divider {
+          margin: 8px 0;
+          border-top: 1px solid #e9ecef;
+        }
+        
+        /* Project Item Animation */
+        .project-item {
+          transition: all 0.5s ease;
+        }
+        
+        .project-item.fade-out {
+          opacity: 0;
+          transform: scale(0.8);
+          pointer-events: none;
+        }
+        
+        .project-item.fade-in {
+          opacity: 1;
+          transform: scale(1);
+        }
+        
         /* Responsive adjustments */
         @media (max-width: 768px) {
           .flip-card {
@@ -428,6 +511,11 @@
             padding: 8px 16px;
             font-size: 0.9em;
           }
+          
+          .filter-btn {
+            font-size: 0.9rem;
+            padding: 10px 20px;
+          }
         }
 
     </style>
@@ -444,35 +532,65 @@
   
   
   
-  <!-- ======= Start About Section ======= -->
-  
-  <section id="about" class="about">
-    <div class="about-me container">
-      <div class="section-title">
-        <h2>About Me</h2>
+ <!-- ======= Start About Section ======= -->
+<section id="about" class="about">
+  <div class="about-me container">
+    <div class="section-title">
+      <h2>About Me</h2>
+    </div>
+
+    <div class="row">
+      <!-- Profile Picture -->
+      <div class="col-lg-4" data-aos="fade-right">
+        <img src="assets/img/about/ppvasu.png" class="img-fluid rounded-circle" alt="Vasu Solanki animated profile picture">
       </div>
-      <div class="row">
-        <div class="col-lg-4" data-aos="fade-right">
-          <img src="assets/img/about/VASU-DEADPOOL.gif" class="img-fluid rounded-circle" alt="Vasu Solanki animated profile picture">
+
+      <!-- Content -->
+      <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+        <p>
+          Hi there! 👋 I'm <strong>Vasu Solanki</strong><br><br>
+
+          I’m a budding data enthusiast from Delhi, India, currently pursuing a <strong>B.Tech in Computer Science Engineering at I.T.S Engineering College</strong>. My ultimate goal is to become a data scientist, uncovering insights and making impactful contributions through the power of <em>data, statistics, and storytelling</em>.
+          <br><br>
+
+          My journey wasn’t straightforward — in my second semester of B.Tech, financial challenges pushed me to search for a career path that was practical and future-proof. I tried web development (fun for the vibe coder in me, but incomplete), explored DSA (loved the logic, found development boring), and then one of my friends introduced me to <strong>data analytics</strong>. He had just landed a job after completing a course, and that sparked my curiosity.
+          <br><br>
+
+          At first, online projects felt monotonous. But then I joined an institute, where I met my mentor <strong>Prushuttam Sir</strong>. He taught me what data analytics and data science really mean in the real world. That clicked — because I’ve always been the curious kid asking endless <em>“what ifs”</em> and <em>“whys”</em>, constantly experimenting. Today, that same curiosity drives me in analytics, and <strong>feature engineering</strong> has become my favorite playground.
+          <br><br>
+
+          Outside academics, I love indulging in <strong>strategic chess</strong> matches, experimenting with new recipes in the kitchen, exploring intriguing YouTube content, and playing the <strong>d-flute</strong>. These hobbies sharpen my focus, creativity, and problem-solving mindset.  
+          <br><br>
+
+          I take pride in observing and analyzing the world around me. With a natural inclination to help others, I’m always eager to share insights, explain concepts, and solve problems in a simple, calm way. Continuous learning is my mantra — and data is the lens through which I see patterns, stories, and solutions.  
+        </p>
+
+        <!-- Quick Highlights -->
+        <div class="row mt-3">
+          <div class="col-md-6">
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <strong>Skills:</strong> Python, Machine Learning, SQL, Tableau, Power BI</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <strong>Strengths:</strong> Curiosity, Problem-Solving, Data Storytelling</li>
+              <li><i class="bi bi-chevron-right"></i> <strong>Hobbies:</strong> Flute, Chess, Sudoku, Cooking Experiments</li>
+            </ul>
+          </div>
         </div>
-        <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-          <p>
-            Hi there! 👋 I'm Vasu Solanki<br><br>
 
-            As a budding data enthusiast from Delhi, India, my ultimate goal is to become a data scientist. I am deeply passionate about the field of data science and am committed to honing my skills in data analytics. My vision is to uncover insights and make impactful contributions through the power of data, statistics, and storytelling.
-            <br><br>
-            
-            Currently, I am pursuing a BTech in Computer Science Engineering at I.T.S Engineering College. My academic journey is focused on developing a solid foundation in data analytics while exploring various facets of computer science. Outside the classroom, I indulge in strategic chess games, enjoy exploring intriguing content on YouTube, and experiment with new recipes in the kitchen.
-            <br><br>
-            I take pride in my ability to observe and analyze the world around me. With a natural inclination towards helping others, I am always eager to provide assistance and guidance. Whether it's through problem-solving or sharing insights, I’m dedicated to continuous learning and growth. Let's connect and explore the exciting world of data together!
-
-          </p>
+        <!-- Call to Action -->
+        <div class="mt-4">
+          <a href="#projects" class="btn btn-primary" style="border-radius:8px; padding:8px 16px;">See My Projects</a>
+          <a href="https://www.linkedin.com/in/vasusolanki/" target="_blank" class="btn btn-outline-secondary" style="border-radius:8px; padding:8px 16px; margin-left:10px;">Let’s Connect</a>
         </div>
       </div>
     </div>
-  </section>
-  
-  <!-- ======= End About Section ======= -->
+  </div>
+</section>
+<!-- ======= End About Section ======= -->
+
 
 
 
@@ -719,8 +837,78 @@
 
       <div class="row">
         
-        <!-- Project 1 -->
-        <div class="col-md-4 mb-4">
+        <!-- New Project: Sleeping Disorder Dashboard -->
+        <div class="col-md-4 mb-4 project-item" data-category="python data-analysis jupyter-notebook">
+          <div class="flip-card" data-aos="fade-up" data-aos-delay="50">
+            <div class="flip-card-inner">
+              <!-- Front Side -->
+              <div class="flip-card-front certificate-item">
+                <div class="front-image-container">
+                  <img src="assets/img/projects/sleepDisorderDashboard.jpg" class="img-fluid" alt="Sleeping Disorder Dashboard Project">
+                </div>
+                <div class="front-divider"></div>
+                <div class="front-content">
+                  <h5 class="title">
+                    <strong>Sleeping Disorder Dashboard</strong>
+                  </h5>
+                  <p class="description">Python | Jupyter Notebook | Data Analysis | Health Analytics</p>
+                </div>
+              </div>
+              <!-- Back Side -->
+              <div class="flip-card-back">
+                <div class="back-content">
+                  <h5 class="back-title">Sleeping Disorder Dashboard</h5>
+                  <p class="back-description">Interactive data analysis dashboard for sleep disorder patterns using Python and Jupyter Notebook. Analyzes sleep quality metrics, disorder classifications, and health indicators to provide insights into sleep-related health issues.</p>
+                  <div class="project-links">
+                    <a href="https://github.com/Vasu-Solanki/Sleeping-Disorder-Dashboard" target="_blank" rel="noreferrer" class="project-link github-link">
+                      <i class="bx bxl-github"></i> GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/vasusolanki/" target="_blank" rel="noreferrer" class="project-link linkedin-link">
+                      <i class="bx bxl-linkedin"></i> LinkedIn
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Project 4: Bank Loan Analysis -->
+        <div class="col-md-4 mb-4 project-item" data-category="python machine-learning data-analysis">
+          <div class="flip-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="flip-card-inner">
+              <!-- Front Side -->
+              <div class="flip-card-front certificate-item">
+                <div class="front-image-container">
+                  <img src="assets/img/projects/bank file pdf_page-0001.jpg" class="img-fluid" alt="Bank Loan Analysis Project">
+                </div>
+                <div class="front-divider"></div>
+                <div class="front-content">
+                  <h5 class="title">
+                    <strong>Bank Loan Analysis</strong>
+                  </h5>
+                  <p class="description"> Data Analyst | Business Analysis | MySQL | Power BI </p>
+                </div>
+              </div>
+              <!-- Back Side -->
+              <div class="flip-card-back">
+                <div class="back-content">
+                  <h5 class="back-title">Bank Loan Analysis</h5>
+                  <p class="back-description">Analysis of bank loan data to predict loan eligibility using various machine learning techniques.</p>
+                  <div class="project-links">
+                    <a href="https://github.com/Vasu-Solanki/Bank-Loan-Analysis" target="_blank" rel="noreferrer" class="project-link github-link">
+                      <i class="bx bxl-github"></i> GitHub
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Blinkit -->
+        <div class="col-md-4 mb-4 project-item" data-category="powerbi data-analysis">
           <div class="flip-card" data-aos="fade-up" data-aos-delay="100">
             <div class="flip-card-inner">
               <!-- Front Side -->
@@ -755,8 +943,11 @@
           </div>
         </div>
 
-        <!-- Project 2 -->
-        <div class="col-md-4 mb-4">
+
+
+
+        <!-- Project Madhav Sales Dashboard -->
+        <div class="col-md-4 mb-4 project-item" data-category="excel powerbi data-analysis">
           <div class="flip-card" data-aos="fade-up" data-aos-delay="200">
             <div class="flip-card-inner">
               <!-- Front Side -->
@@ -791,8 +982,8 @@
           </div>
         </div>
 
-        <!-- Project 3 -->
-        <div class="col-md-4 mb-4">
+        <!-- Project Diwali Sales Analysis -->
+        <div class="col-md-4 mb-4 project-item" data-category="python data-analysis">
           <div class="flip-card" data-aos="fade-up" data-aos-delay="300">
             <div class="flip-card-inner">
               <!-- Front Side -->
@@ -828,11 +1019,48 @@
           </div>
         </div>
 
+
+
+
+        <!-- Project 5: Vrinda Store Sales Report -->
+        <div class="col-md-4 mb-4 project-item" data-category="data-analysis excel">
+          <div class="flip-card" data-aos="fade-up" data-aos-delay="500">
+            <div class="flip-card-inner">
+              <!-- Front Side -->
+              <div class="flip-card-front certificate-item">
+                <div class="front-image-container">
+                  <img src="assets/img/projects/VrindaStoreAnalysis.gif" class="img-fluid" alt="Vrinda Store Sales Report">
+                </div>
+                <div class="front-divider"></div>
+                <div class="front-content">
+                  <h5 class="title">
+                    <strong>Vrinda Store Sales Report</strong>
+                  </h5>
+                  <p class="description">Report | Data Visualization</p>
+                </div>
+              </div>
+              <!-- Back Side -->
+              <div class="flip-card-back">
+                <div class="back-content">
+                  <h5 class="back-title">Vrinda Store Sales Report</h5>
+                  <p class="back-description">Annual sales report for Vrinda store to understand customer insights and grow the business further.</p>
+                  <div class="project-links">
+                    <a href="https://github.com/Vasu-Solanki/Vrinda-Store-Sales-Report" target="_blank" rel="noreferrer" class="project-link github-link">
+                      <i class="bx bxl-github"></i> GitHub
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
       </div>
     </div>
   </section>
 
-<!-- ======= End Projects Section ======= -->
+  <!-- ======= End Projects Section ======= -->
 
 
 
@@ -1000,16 +1228,16 @@
         <h2>CV</h2>
         <!-- Container for centering the button -->
         <div class="button-container text-center">
-          <a href="assets/img/resume-cv/VasuSolankiResume.pdf" class="btn btn-primary" download>Download CV</a>
+          <a href="assets/img/resume-cv/VasuSolanki_Resume.pdf" class="btn btn-primary" download>Download CV</a>
         </div>
       </div>
       
       <br>
       <!-- CV Details -->
-      <a href="assets/img/resume-cv/VasuSolankiResume.pdf" target="_blank">
+      <a href="assets/img/resume-cv/VasuSolanki_Resume.pdf" target="_blank">
       <div class="resume-preview text-center">
         <!-- Resume Image or PDF Preview -->
-          <img src="assets/img/resume-cv/VasuSolankiResume.jpg" alt="Resume Preview" class="resume-image">
+          <img src="assets/img/resume-cv/VasuSolanki_Resume_page-0001.jpg" alt="Resume Preview" class="resume-image">
         </div>
       </a>
     </div>
@@ -1049,6 +1277,7 @@
   <!-- Template Main JS File -->
 
   <script src="assets/js/main.js"></script>
+
 
   <!-- Interactive Cat Follower Script -->
   <script>
