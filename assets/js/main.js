@@ -148,4 +148,32 @@
     $('.venobox').venobox();
   });
 
+  // Hide header on scroll down, show on scroll up
+  var lastScrollTop = 0;
+  var delta = 5;
+  var navbarHeight = $('#header').outerHeight();
+
+  $(window).scroll(function() {
+    var currentScroll = $(this).scrollTop();
+    
+    // Only apply hide-on-scroll after scrolling past the header
+    if (currentScroll > navbarHeight) {
+      // Check if user is scrolling down
+      if (currentScroll > lastScrollTop + delta) {
+        // Scrolling DOWN - hide header
+        $('#header').addClass('header-hidden');
+      } 
+      // Check if user is scrolling up
+      else if (currentScroll < lastScrollTop - delta) {
+        // Scrolling UP - show header
+        $('#header').removeClass('header-hidden');
+      }
+    } else {
+      // Always show header when near the top
+      $('#header').removeClass('header-hidden');
+    }
+    
+    lastScrollTop = currentScroll;
+  });
+
 })(jQuery);
