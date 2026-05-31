@@ -34,7 +34,12 @@ I'm a passionate data analyst and BTech Computer Science student from Delhi, Ind
 
 <p float="center">
     
-<img width="960" height="417" alt="pp" src="https://github.com/user-attachments/assets/f6d7c74e-783a-4a24-b7b2-5a737e7dc7b9" />
+<img width="1920" height="839" alt="1" src="https://github.com/user-attachments/assets/6207e128-c157-43bc-a15d-8d02b21a1784" />
+<img width="1920" height="841" alt="2" src="https://github.com/user-attachments/assets/29f8a41a-2ca6-4698-b172-ec25b3b292fb" />
+<img width="1920" height="843" alt="3" src="https://github.com/user-attachments/assets/5c68fd62-d388-4882-ac96-4723e7573743" />
+<img width="1912" height="842" alt="4" src="https://github.com/user-attachments/assets/f3351bd2-be79-42bd-8fc1-a6a04b69a5c6" />
+<img width="1896" height="827" alt="5" src="https://github.com/user-attachments/assets/990adca5-db0b-4d0b-ae76-256e0cf330c9" />
+
 
 </p>
 
