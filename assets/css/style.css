@@ -4,6 +4,26 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
+
+/* Global fixes for zoom/scaling issues */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  zoom: normal;
+  font-size: 1rem;
+}
+
 /* Add this to your CSS */
 img.rounded-circle {
   border-radius: 100%;
